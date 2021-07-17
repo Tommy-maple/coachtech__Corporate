@@ -1,0 +1,142 @@
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 70px;
+  background: #fff;
+}
+
+.header__logo{
+  height: 25%;
+  margin-left: 35px;
+}
+
+.header__logo img{
+  height: 100%;
+}
+
+.header__nav ul{
+  display: flex;
+}
+
+.header__nav ul li{
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 35px;
+  transition: 0.5s;
+}
+
+.header__nav ul li:hover{
+  opacity: 0.7;
+}
+
+.top{
+  background: url(../img/mv.png) no-repeat center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  margin-bottom: 80px;
+}
+
+.top__text{
+  color: #fff;
+  font-size: 26px;
+}
+
+.news{
+  width: 70%;
+  margin: 0 auto 80px;
+}
+
+.news__item{
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  padding: 25px 20px;
+  font-size: 14px;
+  display: flex;
+}
+
+.news__item-text{
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.contact{
+  background: #eee;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.contact__ttl{
+  font-size: 30px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-text{
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.contact__btn{
+  display: block;
+  text-align: center;
+  width: 300px;
+  padding: 15px 0;
+  margin: 0 auto;
+  color: #fff;
+  background: red;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.contact__btn:hover{
+  opacity: 0.7;
+}
+
+.footer{
+  background: #222;
+  padding: 20px;
+  color: #fff;
+}
+
+.footer__contents{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__contents__icon{
+  font-size: 12px;
+}
+
+.footer__contents__nav ul{
+  display: flex;
+}
+
+.footer__contents__nav ul li{
+  font-size: 12px;
+  padding: 0 12px;
+  transition: 0.5s;
+  border-right: 1px solid #fff;
+}
+
+.footer__contents__nav ul li:last-child{
+  border-right: none;
+  padding-right: none;
+}
+
+.footer__contents__nav ul li:hover{
+  opacity: 0.7;
+}
