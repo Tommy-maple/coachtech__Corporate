@@ -1,6 +1,11 @@
 a{
   text-decoration: none;
   color: inherit;
+  transition: 0.5s;
+}
+
+a:hover{
+  opacity: 0.7;
 }
 
 .header{
@@ -11,6 +16,7 @@ a{
   top: 0;
   height: 70px;
   background: #fff;
+  z-index: 1;
 }
 
 .header__logo{
@@ -30,15 +36,14 @@ a{
   font-size: 15px;
   font-weight: bold;
   margin-right: 30px;
-  transition: 0.5s;
 }
 
-.header__nav ul li:hover{
-  opacity: 0.7;
+.menu{
+  display: none;
 }
 
 .top{
-  background: url(../img/mv.png) no-repeat center;
+  background: url(../img/mv.png) no-repeat center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,27 +53,27 @@ a{
 .top__text{
   text-align: center;
   color: #fff;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .top__text-main{
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 20px;
+  line-height: 70px;
 }
 
 .wish{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: #222;
-  height: 40vh;
+  padding: 100px 0;
   color: #fff;
   margin-bottom: 100px;
 }
 
 .wish__text{
   width: 80%;
-
+  margin: 0 auto;
 }
 
 .wish__text h2{
@@ -127,11 +132,6 @@ a{
   color: #fff;
   background: red;
   font-size: 18px;
-  transition: 0.5s;
-}
-
-.service__btn:hover{
-  opacity: 0.7;
 }
 
 .news{
@@ -165,11 +165,6 @@ a{
   color: #fff;
   background: red;
   font-size: 14px;
-  transition: 0.5s;
-}
-
-.news__div__head-btn:hover{
-  opacity: 0.7;
 }
 
 .news__div__contents-item{
@@ -204,6 +199,7 @@ a{
 .blog__div__contents{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 30px;
 }
 
@@ -234,11 +230,6 @@ a{
   color: #fff;
   background: red;
   font-size: 18px;
-  transition: 0.5s;
-}
-
-.blog__div__btn:hover{
-  opacity: 0.7;
 }
 
 .list{
@@ -254,11 +245,6 @@ a{
   font-weight: bold;
   color: #fff;
   padding: 100px 0;
-  transition: 0.5s;
-}
-
-.list-div:hover{
-  opacity: 0.7;
 }
 
 .list-left{
@@ -296,11 +282,6 @@ a{
   color: #fff;
   background: red;
   font-size: 18px;
-  transition: 0.5s;
-}
-
-.contact__btn:hover{
-  opacity: 0.7;
 }
 
 .footer{
@@ -327,7 +308,6 @@ a{
 .footer__contents__nav ul li{
   font-size: 12px;
   padding: 0 12px;
-  transition: 0.5s;
   border-right: 1px solid #fff;
 }
 
@@ -336,10 +316,106 @@ a{
   padding-right: none;
 }
 
-.footer__contents__nav ul li:hover{
-  opacity: 0.7;
-}
+@media  screen and (max-width: 768px) {
+  .header__nav{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #eee;
+    transition: .7s;
+    text-align: center;
+  }
 
+  .header__nav ul{
+    padding-top: 80px;
+    display: block;
+  }
+
+  .header__nav ul li{
+    margin-top: 50px;
+    font-weight: normal;
+    color: blue;
+  }
+
+  .menu{
+    display: inline-block;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+    right: 20px;
+    top: 0;
+  }
+
+  .menu__top,
+  .menu__middle,
+  .menu__bottom{
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background: #000;
+    position: absolute;
+    transition: 0.5s;
+  }
+
+  .menu__top{
+    top: 0;
+  }
+
+  .menu__middle{
+    top: 14px;
+  }
+
+  .menu__bottom{
+    bottom: 0;
+  }
+
+  .menu.open span:nth-of-type(1){
+    top: 14px;
+    transform: rotate(45deg);
+  }
+
+  .menu.open span:nth-of-type(2){
+    opacity: 0;
+  }
+
+  .menu.open span:nth-of-type(3){
+    top: 14px;
+    transform: rotate(-45deg);
+  }
+
+  .in{
+    transform: translateX(100%);
+  }
+
+  .service__contents-item{
+    width: 100%;
+  }
+
+  .blog__div__contents-item{
+    width: 100%;
+  }
+
+  .footer__contents{
+    display: block;
+    text-align: center;
+  }
+
+  .footer__contents__icon{
+    font-size: 12px;
+  }
+
+  .footer__contents__nav ul{
+    display: block;
+  }
+
+  .footer__contents__nav ul li{
+    border: none;
+    padding-top: 20px;
+  }
+}
 
 
 
